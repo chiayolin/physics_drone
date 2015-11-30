@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Language" content="en">
+    <link rel="stylesheet" type="text/css" href="./lib/css/main.css">
+    <title>Physics: Drones</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <a href="/"><h1>drones :)</h1></a>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="./" style="color: red;">frontpage</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="../simulation/">simulation</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="../about/">about</a></li>
+        </ul>
+      </div>
+      <div class="body">
+        <h1>Drones 101</h1><hr/>
+        <h2>What is a Drone?</h2> 
+        <p><b>An unmanned aerial vehicle</b>, commonly known as a <b>drone</b>, 
+        is an aircraft without a human pilot aboard. Today the term drone has 
+        broadened to include anything from the expensive 100 million USD war 
+        machines :-( to few hundreds dollar octocopters which Amazon used to 
+        deliver packages :-) </p>
+        <br/>
+        <h2>How do they work?</h2>
+        <p>They are many types of drones, so let’s talk about drones that have 
+        propellers. A drone with four propellers is called <b>quadcopter</b>, 
+        the one with eight propellers is called <b>octocopter</b>, and so on. 
+        The propellers on a drone is controlled by a <b>microcontroller</b>, a 
+        microcontroller processes the signals received from its data buses, and 
+        make responses based on the procedures programmed into the memory of a 
+        microcontroller. In order words, a microcontroller is a digital computer 
+        that tells each propeller on a drone exactly what to do. However, having a 
+        digital computer is not enough, since we’ll have to deal with lots of 
+        <b>physics</b> in order to fly a drone in real life. Basically, a drone 
+        will not even take off without <b>the power of physics.</b></p>
+        <br/>
+        <h2>Physics of a Drone:</h3>
+        <br/>
+        <h3>Basics</h3>
+        <p>First we can simplify the problem into a simple diagram known as 
+        <b>free-body diagram</b> before getting into problems like "how does a 
+        drone fly?" Let’s take Amazon’s drone as an example, the machine will weigh
+        5.5 kg with a battery wright of around 2.2 kg, so the total mass of the 
+        drone is 7.7kg:</p>
+        <img src="./lib/img/01.png" alt=""></img>
+        <p>Imagine the box shown above is the simplest form of the drone. We know 
+        that it has a mass of 7.7kg and a weight force pulling it down due to 
+        earth’s gravitational acceleration about 77 newtons. Weight force can be 
+        calculate using <b>Newton’s Second Law</b>, that is, <code>F = ma</code>. 
+        Where <code>m</code> is the mass and <code>a</code> is the acceleration:
+        </p>
+        <img src="./lib/img/02.png" alt="F = ma"></img>
+        <p>Now, we know that in order to overcome gravity, it is necessary to 
+        generate a force that is greater than 77 newtons. This can be accomplished 
+        easily by using propellers. The basic idea is that a drone flies by pushing
+        air down. When the propellers of a drone pushes air dow, the drone hovers.
+        This is because of <b>Newton’s Third Law</b>, which is often stated as  
+        “for every action there’s an equal and opposite reaction”:</p>
+        <img src="./lib/img/03.png" alt=""></img>
+        <p><i>/* the blue part is the air pushing down by the propeller 
+          disks */</i></p>
+        <br/>
+        <h3>Buoyancy</h3>
+        <p>The weight force we got here is 77 newtons; however, the 
+        <b>apparent weight</b> might be slightly smaller due to the buoyancy 
+        of the air. We can calculate the apparent weight by subtracting the 
+        <b>buoyant force</b> from the weight force:</p>
+        <img src="./lib/img/04.png" alt=""></img>
+        <p>The equation for force of buoyancy is:</p>
+        <img src="./lib/img/05.png" alt=""></img>
+        <p>Where the density of the air is:</p>
+        <img src="./lib/img/06.png" alt=""></img>
+        <p>Now, we can work out the apparent weight, but since I couldn’t find 
+        the <b>volume</b> of Amazon’s drone, let’s assume it’s
+        0.0015 m^3 (1.5 liters). Finally we will get around 76.9 newtons of 
+        apparent weight:</p>
+        <img src="./lib/img/07.png" alt=""></img>
+        <p><br/></p>
+        <h3>Thrust Produces by Propellers</h3>
+        <img src="./lib/img/08.png" alt=""></img>
+        <p>A <b>drone</b> hovers because of the thrust produces by the propellers. 
+        A spinning propeller sets up a pressure <b>lower</b> than free stream 
+        on the top of a propeller and <b>higher</b> than free stream behind 
+        the propeller. Downstream of the disk the pressure eventually returns 
+        to free stream condition. The thrust produces by a propeller can be model 
+        by this equation:</p>
+        <img src="./lib/img/09.png" alt=""></img>
+        <p>Where <code>A</code> is the area of the propeller disks and 
+        <code>∆P</code> is the change in pressure.</p>
+      </div>
+      <div class="footer">
+        <p>
+          The Site is Licensed Under the
+          <a href="https://raw.githubusercontent.com/ssiscsc/ssiscsc.github.io/master/LICENSE">
+            MIT License.</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

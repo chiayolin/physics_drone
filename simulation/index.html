@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Language" content="en">
+    <link rel="stylesheet" type="text/css" href="../lib/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/drone.css">
+    <title>Physics: Simulation</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <a href="/"><h1>drones :)</h1></a>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="../" style="color: red;">frontpage</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="../simulation/">simulation</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="../about/">about</a></li>
+        </ul>
+      </div>
+      <div class="body">
+        <h1>FAQ</h1><hr/>
+        <div id="droneCanvas">
+        <div class="buttons">
+          <label for="speed">Speed</label>
+          <input name="speed" id="speedInput" type="number" value="200"> px/sec</input>
+          <button onclick="animation.frames.play();">Play</button>
+          <button onclick="animation.frames.pause();">Pause</button>
+          <button onclick="animation.frames.restart();">Restart</button>
+          <span class="framerate"><span id="altitude">0</span> p</span>
+          <span class="framerate"><span id="framerate">0</span> fps-----</span>
+      </div>
+    </div>
+    <script src="../lib/js/drone.js"></script>
+      </div>
+      <div class="footer">
+        <p>
+          The Site is Licensed Under the 
+            <a href="https://raw.githubusercontent.com/ssiscsc/ssiscsc.github.io/master/LICENSE">
+              MIT License.</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
