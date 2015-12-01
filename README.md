@@ -6,5 +6,6 @@ crappy, pull-requests are welcome :-)
 
 ## License 
 
-The code is licensed under the [MIT][mit] License. 
+The code is licensed under the [MIT][mit] License. See `./LICENSE`
+for more information.
 [mit]: https://en.wikipedia.org/wiki/MIT_License
